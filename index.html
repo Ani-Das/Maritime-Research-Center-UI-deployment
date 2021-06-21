@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link type="text/css" rel="stylesheet" href="cascadepic.css">
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+   <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+    <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'">   this>&#9776;-->
+    <title>GUI interface frontend</title>
+  </head>
+
+  <script>
+
+    //Screen1 func
+    function openNav1() {
+      document.getElementById("myNav1").style.width = "100%";
+    }
+    
+    function closeNav1() {
+      document.getElementById("myNav1").style.width = "0%";
+    }
+    //Screen2
+    function openNav2() {
+      document.getElementById("myNav2").style.width = "100%";
+    }
+    
+    function closeNav2() {
+      document.getElementById("myNav2").style.width = "0%";
+    }
+    //Screen3
+    function openNav3() {
+      document.getElementById("myNav3").style.width = "100%";
+    }
+    
+    function closeNav3() {
+      document.getElementById("myNav3").style.width = "0%";
+    }
+    //Screen4
+    function openNav4() {
+      document.getElementById("myNav4").style.width = "100%";
+    }
+    
+    function closeNav4() {
+      document.getElementById("myNav4").style.width = "0%";
+    }
+    </script>
+
+  <style>
+
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 60px;
+  left: 0;
+  background-color: rgb(148, 144, 144);
+  background-color: rgba(124, 120, 120, 0.9);
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  position: relative;
+  /*top: 0%;*/
+  width: 100%;
+  margin-top: 1px;
+}
+          
+    .box {
+          background-color:  rgba(63, 62, 62, 0.9);
+          border: black;
+          border-radius: 2px;
+          text-align: center;
+          padding: 5px;
+          font-size: 25px;}
+
+    table, th, td {
+      border: 1px solid black;
+      border-collapse: collapse;
+      background-color: rgb(16, 202, 235);
+      align-self: center;
+    }
+
+    th,td{
+      padding: 5px;
+      text-align: center;
+    }
+
+    .table1, .th1, .td1 {
+      border: 1px solid black;
+      border-collapse: collapse;
+      background-color: rgb(148, 144, 144);
+      /*align-self: center;*/
+      position:absolute;
+      
+    }
+
+    .th1,.td1{
+      padding: 20px;
+      text-align: left;
+      width: max-content;
+    }
+
+.anch:link, .anch:visited
+    {  background-color: rgba(182, 65, 65, 0.8);
+      color:rgb(0, 0, 0);
+      padding: 6px;
+      text-align: center;
+      display: inline block;
+      font-size: 25px;}
+    
+     .anch:hover, .anch:active
+    { background-color: rgb(245, 27, 27);}
+
+    .anch2:link, .anch2:visited
+    {  background-color:  rgb(16, 202, 235);
+      color:rgb(0, 0, 0);
+      padding: 5px;
+      text-decoration: none;
+      text-align: center;
+      display: inline block;
+      font-size: 25px;}
+    
+     .anch2:hover, .anch2:active
+    { background-color: rgb(6, 14, 116);
+      color: white;
+    }
+
+    .anch3:link, .anch3:visited
+    {  background-color:  rgba(153, 146, 146, 0.9);
+      color:rgb(0, 0, 0);
+      padding: 3px;
+      text-align: center;
+      text-decoration: none;
+      display: inline block;
+      font-size: 25px;}
+    
+     .anch3:hover, .anch3:active
+    { background-color:  rgba(102, 99, 99, 0.9);
+      color:rgb(0, 0, 0)
+    }
+
+
+
+  </style>
+
+  <body style="background-color: #c2bdbd;">  
+    <header>
+    <table style="width: 100%; height: 50px">
+        
+        <tr>
+          <td class="anch2" style="font-size:20px; width:100px"><span style="cursor:pointer;" onclick="openNav1()"> Screen1</span></td>
+          
+             <td class="anch2" style="width:100px; font-size:20px;"><span style="cursor:pointer;" onclick="openNav2()"> Screen2</span></td> 
+             
+          <td class="anch2" style="font-size:20px; width:100px"><span style="cursor:pointer;" onclick="openNav3()"> Screen3</span></td>  
+          <td class="anch2" style="font-size:20px; width:100px"> <span style="cursor:pointer;" onclick="openNav4()"> Screen4</span></td> 
+          <td></td>     
+              </tr>   
+      </table>
+    </header>
+    <link type="text/css" rel="stylesheet" href="cascadepic.css">
+    <img style="position:absolute; left:80%; top:85px;"class="circular--square" src="pics/logood.JPG" width="150px" height="200px"/>
+    <img style="position:absolute; left:38%; top:240px; " src="pics/1final.JPG" width="800px" height="650px">
+    <img style="position:absolute; left:1%; top:80px; " src="pics/2.JPG" width="700px" height="550px">
+
+    <!--Screen1 content-->
+
+    <div id="myNav1" class="overlay">
+      <a class="anch" href="javascript:void(0)" class="closebtn" onclick="closeNav1()">&times;</a>
+
+      <div class="box" style="position: absolute; left:5%; top: 0%;"><a class="anch3" href="" target="_blank">Input</a></div>
+        <div class="box" style="position: absolute; left:10%; top: 0px;"><a class="anch3" href="" target="_blank">Ambient Noise</a></div>
+
+      <hr color="black" style="width: 100%; size: 0.5px;">
+
+      <div class="overlay-content">
+        <img style="position:absolute; left:3%; top:20px;" src="pics/screen 1.1.JPG" width="950px" height="460px">
+
+        <h3 style="position:absolute; left:5%; top:510px;">Source noise of ships</h3>
+        <img style="position:absolute; left:5%; top:560px;" src="pics/screen 1.3.JPG" width="400px" height="250px">
+
+        <h3 style="position:absolute; left:30%; top:510px;">Average Sound Speed Profile of Region</h3>
+        <img style="position:absolute; left:30%; top:560px;" src="pics/screen 1.2.JPG" width="400px" height="250px">
+
+        <h3 style="position:absolute; left:63%; top:4px;">Average TL Variation</h3>
+        <img style="position:absolute; left:60%; top:50px;" class="circular--square" src="pics/screen 1.4.JPG" width="300px" height="250px">
+        <h3 style="position:absolute; left:64%; top:355px;">Ship Traffic Density</h3>
+        <img style="position:absolute; left:60%; top:410px;" class="circular--square" src="pics/screen 1.5.JPG" width="310px" height="300px">
+        
+        <!--INPUT table-->
+      <table class="table1" style="top:100px ; left: 80%;">  
+          <tr>   
+              <td class="td1" style=" width: 230px; padding-left: 50px;"> 
+           <form action="/action_page.php"> 
+            <h3>Parameters :</h3>
+       <br>Frequency(Hz) :<br>
+       <input type="text" placeholder="Hz" name ="frequency"><br>
+       <br>Avg Noise :<br>   
+       <input type="text" placeholder="Db" name ="Sound"><br>
+       <br>AIS Data Type :<br>
+       <input type="text" placeholder="" name ="Data"><br>
+        <br>Lowest Noise  :<br>
+       <input type="text" placeholder="Db" name ="Minnoise"><br>
+       <br>No. of Vessels : <br>
+       <input type="text" placeholder="Number" name ="number"><br>
+       <br>Highest Noise  : <br>
+       <input type="text" placeholder="Db" name ="Maxnoise"><br>
+       <br><center> <input type="submit" value="submit"> </center>
+       </form>
+       </td>
+       </tr>
+       </table>
+
+      </div>
+    </div>
+
+    <!--Screen2 content-->
+
+    <div id="myNav2" class="overlay">
+      <a class="anch" href="javascript:void(0)" class="closebtn" onclick="closeNav2()">&times;</a>
+
+      <div class="box" style="position: absolute; left:5%; top: 0%;"><a class="anch3" href="" target="_blank">Input</a></div>
+        <div class="box" style="position: absolute; left:10%; top: 0px;"><a class="anch3" href="" target="_blank">SNR Map</a></div>
+
+      <hr color="black" style="width: 100%; size: 0.5px;">
+
+      <div class="overlay-content">
+        <img style="position:absolute; left:3%; top:20px;" src="pics/screen2.1.JPG" width="950px" height="460px">
+
+        <h3 style="position:absolute; left:7%; top:510px;">Site specific SNR</h3>
+        <img style="position:absolute; left:5%; top:560px;" class="circular--square" src="pics/screen2.2.JPG" width="300px" height="250px">
+
+        <h3 style="position:absolute; left:30%; top:510px;">Ambient Noise Map of the Region</h3>
+        <img style="position:absolute; left:30%; top:560px;" src="pics/screen2.3.JPG" width="400px" height="250px">
+
+        <h3 style="position:absolute; left:61%; top:4px;">Detection Range from the selected point</h3>
+        <img style="position:absolute; left:60%; top:50px;" class="circular--square" src="pics/screen2.4.JPG" width="300px" height="250px">
+        <h3 style="position:absolute; left:64%; top:355px;">Transmission Loss</h3>
+        <img style="position:absolute; left:60%; top:410px;" class="circular--square" src="pics/screen2.5.JPG" width="310px" height="300px">
+        
+        <!--INPUT table-->
+      <table class="table1" style="top:100px ; left: 80%;">  
+          <tr>   
+              <td class="td1" style=" width: 230px; padding-left: 50px;"> 
+           <form action="/action_page.php"> 
+            <h3>Parameters :</h3>
+       <br>Frequency(Hz) :<br>
+       <input type="text" placeholder="Hz" name ="frequency"><br>
+       <br>Avg SNR :<br>   
+       <input type="text" placeholder="" name ="Sound"><br>
+       <br>AIS Data Type :<br>
+       <input type="text" placeholder="" name ="Data"><br>
+        <br>Lowest SNR  :<br>
+       <input type="text" placeholder="" name ="Minnoise"><br>
+       <br>No. of Vessels : <br>
+       <input type="text" placeholder="Number" name ="number"><br>
+       <br>Highest SNR  : <br>
+       <input type="text" placeholder="" name ="Maxnoise"><br>
+       <br><center> <input type="submit" value="submit"> </center>
+       </form>
+       </td>
+       </tr>
+       </table>
+
+      </div>
+    </div>
+
+    <!--Screen3 content-->
+
+    <div id="myNav3" class="overlay">
+      <a class="anch" href="javascript:void(0)" class="closebtn" onclick="closeNav3()">&times;</a>
+
+      <div class="box" style="position: absolute; left:5%; top: 0%;"><a class="anch3" href="" target="_blank">Input</a></div>
+        <div class="box" style="position: absolute; left:10%; top: 0px;"><a class="anch3" href="" target="_blank">Vulnerability Assessment</a></div>
+
+      <hr color="black" style="width: 100%; size: 0.5px;">
+
+      <div class="overlay-content">
+        <img style="position:absolute; left:3%; top:20px;" src="pics/screen3.1.JPG" width="950px" height="460px">
+
+        <h3 style="position:absolute; left:7%; top:510px;">SNR Map</h3>
+        <img style="position:absolute; left:5%; top:560px;" class="circular--square" src="pics/screen3.2.JPG" width="300px" height="250px">
+
+        <h3 style="position:absolute; left:30%; top:510px;">Ambient Noise Map of the Region</h3>
+        <img style="position:absolute; left:30%; top:560px;" src="pics/screen2.3.JPG" width="400px" height="250px">
+
+        <h3 style="position:absolute; left:61%; top:4px;">Average Vulnerabilty Range of Map</h3>
+        <img style="position:absolute; left:60%; top:50px;" class="circular--square" src="pics/screen3.4.JPG" width="300px" height="250px">
+        <h3 style="position:absolute; left:64%; top:355px;">Transmission Loss</h3>
+        <img style="position:absolute; left:60%; top:410px;" class="circular--square" src="pics/screen3.5.JPG" width="310px" height="300px">
+        
+        <!--INPUT table-->
+      <table class="table1" style="top:100px ; left: 80%;">  
+          <tr>   
+              <td class="td1" style=" width: 230px; padding-left: 50px;"> 
+           <form action="/action_page.php"> 
+            <h3>Parameters :</h3>
+       <br>Frequency(Hz) :<br>
+       <input type="text" placeholder="Hz" name ="frequency"><br>
+       <br>Avg SNR :<br>   
+       <input type="text" placeholder="" name ="Sound"><br>
+       <br>AIS Data Type :<br>
+       <input type="text" placeholder="" name ="Data"><br>
+        <br>Lowest SNR  :<br>
+       <input type="text" placeholder="" name ="Minnoise"><br>
+       <br>No. of Vessels : <br>
+       <input type="text" placeholder="Number" name ="number"><br>
+       <br>Highest SNR  : <br>
+       <input type="text" placeholder="" name ="Maxnoise"><br>
+       <br><center> <input type="submit" value="submit"> </center>
+       </form>
+       </td>
+       </tr>
+       </table>
+
+      </div>
+    </div>  
+
+    <!--Screen4 content-->
+
+    <div id="myNav4" class="overlay">
+      <a class="anch" href="javascript:void(0)" class="closebtn" onclick="closeNav4()">&times;</a>
+
+      <div class="box" style="position: absolute; left:5%; top: 0%;"><a class="anch3" href="" target="_blank">Input</a></div>
+        <div class="box" style="position: absolute; left:10%; top: 0px; padding-bottom: 5px;"><a class="anch3" href="" target="_blank">Effective Detection</a></div>
+
+      <hr color="black" style="width: 100%; size: 0.5px;">
+
+      <div class="overlay-content">
+        <img style="position:absolute; left:3%; top:20px;" src="pics/screen4.1.JPG" width="950px" height="460px">
+
+        <h3 style="position:absolute; left:7%; top:510px;">SNR Map</h3>
+        <img style="position:absolute; left:5%; top:560px;" src="pics/screen4.2.JPG" width="320px" height="250px">
+
+        <h3 style="position:absolute; left:30%; top:510px;">Ambient Noise Map of the Region</h3>
+        <img style="position:absolute; left:30%; top:560px;" src="pics/screen2.3.JPG" width="400px" height="250px">
+
+        <h3 style="position:absolute; left:61%; top:4px;">Effective Deployment Location</h3>
+        <img style="position:absolute; left:60%; top:50px;" class="circular--square" src="pics/screen4.4.JPG" width="300px" height="250px">
+        <h3 style="position:absolute; left:63%; top:355px;">Vulnerability Range</h3>
+        <img style="position:absolute; left:59%; top:410px;" src="pics/screen4.5.JPG" width="355px" height="300px">
+        
+        <!--INPUT table-->
+      <table class="table1" style="top:100px ; left: 80%;">  
+          <tr>   
+              <td class="td1" style=" width: 230px; padding-left: 50px;"> 
+           <form action="/action_page.php"> 
+            <h3>Parameters :</h3>
+       <br>Frequency(Hz) :<br>
+       <input type="text" placeholder="Hz" name ="frequency"><br>
+       <br>Avg SNR :<br>   
+       <input type="text" placeholder="" name ="Sound"><br>
+       <br>AIS Data Type :<br>
+       <input type="text" placeholder="" name ="Data"><br>
+        <br>Lowest SNR  :<br>
+       <input type="text" placeholder="" name ="Minnoise"><br>
+       <br>No. of Vessels : <br>
+       <input type="text" placeholder="Number" name ="number"><br>
+       <br>Highest SNR  : <br>
+       <input type="text" placeholder="" name ="Maxnoise"><br>
+       <br><center> <input type="submit" value="submit"> </center>
+       </form>
+       </td>
+       </tr>
+       </table>
+
+      </div>
+    </div>  
+
+         
+
+    <!-- You can also require other files to run in this process -->
+    <script src="./renderer.js"></script>
+  </body>
+</html>
